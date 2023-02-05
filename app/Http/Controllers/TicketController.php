@@ -172,8 +172,8 @@ class TicketController extends Controller
         try {
             return response()->json([
                 'status' => true,
-                'data' => Ticket::select('id', 'name','hour_cost')
-                    ->paginate(3)
+                'data' => Ticket::all()
+                    
 
             ]);
         } catch (\Exception $e) {
